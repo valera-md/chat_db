@@ -41,7 +41,6 @@ class MessageRepository:
             WHERE
             id = {id};
             """)
-        #print(self.curs.fetchone())
         data = self.curs.fetchone()
         return Message(*data)
     def findAllByContent(self, keyword):
